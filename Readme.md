@@ -5,4 +5,4 @@ O codigo da tabela está na pasta arquivos com o nome do arquivo "codigo.sql" co
 
 # CONExÃO DO PHP COM BANCO DE DADOS
 
-Utilizei o xamp para fazer essa conexao então precisa ser alterado o username, password, e senha caso seja diferente do qual utilizei ![exemplo front](./arquivos/ImagemConexao.png)
+Utilizei o xamp para fazer essa conexao então precisa ser alterado o username, password, e senha caso seja diferente do qual utilizei ![exemplo front](./arquivos/ImagemConexao.png).
