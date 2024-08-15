@@ -1,6 +1,16 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('Desafio/arquivos/static/MinhaFonte.woff2') format('woff2'),
+         url('Desafio/arquivos/static/MinhaFonte.woff') format('woff'),
+         url('Desafio/arquivos/static/MinhaFonte.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0a0d29;
+    font-family: 'MinhaFonte', sans-serif;
+    background-color: #092456;
     color: white;
     display: flex;
     justify-content: center;
@@ -10,12 +20,30 @@ body {
 }
 
 .container {
-    background-color: #1a1f3f;
+    background-color: #000000;
     border-radius: 15px;
     padding: 40px;
     max-width: 600px;
     text-align: center;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgb(0, 0, 0);
+}
+
+.blur-circle {
+    width: 250px;
+    height: 250px;
+    background: #165cde; /* Cor azul */
+    border-radius: 50%;
+    filter: blur(80px); /* Efeito de desfoque */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o círculo */
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo na frente do círculo */
 }
 
 .icone-ok {
@@ -37,4 +65,23 @@ p {
 .logotipo {
     width: 150px;
     height: auto;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.icone-ok {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }

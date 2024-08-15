@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="container">
+        <div class="blur-circle"></div>
         <div class="formulario">
             <form action="cadastro_php.php" method="post">
                 <h1>Inscreva-se agora!</h1>

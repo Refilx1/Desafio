@@ -1,6 +1,17 @@
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('Desafio/arquivos/static/MinhaFonte.woff2') format('woff2'),
+         url('Desafio/arquivos/static/MinhaFonte.woff') format('woff'),
+         url('Desafio/arquivos/static/MinhaFonte.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0a0d29;
+    font-family: 'MinhaFonte', sans-serif;
+    background-color: #092456;
     color: white;
     display: flex;
     justify-content: center;
@@ -10,7 +21,7 @@ body {
 }
 
 .container {
-    background-color: #1a1f3f;
+    background-color: #000000;
     border-radius: 15px;
     display: flex;
     padding: 20px;
@@ -19,9 +30,24 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+.blur-circle {
+    width: 250px;
+    height: 250px;
+    background: #165cde; /* Cor azul */
+    border-radius: 50%;
+    filter: blur(80px); /* Efeito de desfoque */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o círculo */
+    z-index: 0;
+}
+
 .formulario, .imagem {
     width: 50%;
     padding: 20px;
+    position: relative;
+    z-index: 1; /* Coloca o conteúdo na frente do círculo */
 }
 
 h1 {
