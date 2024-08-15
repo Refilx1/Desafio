@@ -1,18 +1,13 @@
 <?php
-// Iniciar a sessão
 session_start();
-
-// Verificar se o usuário está logado
 if (!isset($_SESSION['email'])) {
     header("Location: pagina_inicial.php");
     exit();
 }
 
-include('connection.php'); // Inclua a conexão com o banco de dados
-
+include('connection.php'); 
 $email = $_SESSION['email'];
 
-// Atualizar a coluna 'cadastrado' para NULL
 $sql = "UPDATE usuario SET cadastrado = NULL WHERE email = '$email'";
 
 if ($conn->query($sql) === TRUE) {

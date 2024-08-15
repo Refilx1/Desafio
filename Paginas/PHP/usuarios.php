@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +9,15 @@
 <?php
     require_once('connection.php');
     $id = $_GET['id'];  
-    
     $sql = "SELECT id FROM usuario WHERE id = $id";
-
     $result = $conn->query($sql);
+
     ?>
     <div>
         <a href="pagina_inicial.php"><h3>Voltar a Pagina inicial</h3></a><br>
     </div>
-    <?php
 
+    <?php
     if($result && $result->num_rows>0){
         echo "<table>";
         while ($row = $result->fetch_assoc()) {
@@ -31,10 +28,7 @@
     } else {
         echo "Nenhum resultado encontrado";
     }
-
     $conn->close();
-    
 ?>
-
 </body>
 </html>

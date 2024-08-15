@@ -1,10 +1,7 @@
 <?php
-// Iniciar a sessão
 session_start();
 
-// Verificar se o usuário está logado
 if (!isset($_SESSION['email'])) {
-    // Se o usuário não estiver logado, redirecionar para a página de login
     header("Location: pagina_inicial.php");
     exit();
 }
@@ -29,10 +26,7 @@ if (!isset($_SESSION['email'])) {
             <img src="../../img/logo-mindtech.svg" alt="Logotipo Mindtech" class="logotipo">
         </div>
         <div class="content">
-            <!-- Exibir informações do usuário -->
             <p>Bem-vindo, <?php echo $_SESSION['email']; ?>!</p>
-
-            <!-- Botão para descadastrar -->
             <form action="descadastrar.php" method="post">
                 <button type="submit" class="descadastrar-btn">Descadastrar</button>
             </form>
